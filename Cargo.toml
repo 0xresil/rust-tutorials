@@ -8,3 +8,4 @@ edition = "2018"
 [dependencies]
 borsh = "0.9.1"
 borsh-derive = "0.9.1"
+arr_macro = "0.1.3"
