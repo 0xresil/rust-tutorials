@@ -1,8 +1,4 @@
 
-
-
-
-
 struct Point {
     x: f32,
     y: f32
@@ -29,8 +25,19 @@ fn main() {
 
     match_tuple((1, "wasdf".to_string()));
 
+    // if let sentences
+
     let ot = Some((2, "hello".to_string()));
-    if let Some((_, ref s)) = ot {
+    if let Some((1, ref s)) = ot {
         println!("{}", s);
+    } else {
+        println!("no match");
     }
+
+    if let Ok(n) = "42".parse::<i32>() {
+        println!("n is {}", n);
+    }
+
+    let n: i32 = "44".parse().unwrap();
+    println!("n is {}", n);
 }
