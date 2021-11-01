@@ -50,4 +50,28 @@ fn main() {
     for s in fivostr_iter("he", "wo") {
         println!("{}", s);
     }
+
+    let fivo_serial: Vec<u32> = fivonachi_iter().collect();
+    println!("{:?}", fivo_serial);
+
+    let fivo_serial1: Vec<u32> = fivonachi_iter().filter(|x| x % 2 == 1).collect();
+    println!("{:?}", fivo_serial1);
+
+    let tuples = [(10, "ten"), (20, "twenty"), (30, "thirty"), (40, "forty")];
+    let iter = tuples.iter().filter(|t| t.0 > 20).map(|t| t.0);
+
+    for name in iter {
+        println!("{:?} ", name);
+    }
+
+    let fivo_str_serial: Vec<String> = fivostr_iter("hi","hello").collect();
+    for n in fivo_str_serial.iter().map(|x: &String| x.len()) {
+        println!("{:?}", n);
+    }
+
+    for n in fivo_str_serial.iter().filter(|x| *x == "hello") {
+        println!("{:?}", n);
+    }
+    println!("{:?} ", fivo_str_serial);
+
 }
