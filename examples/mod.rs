@@ -2,7 +2,6 @@
 use std::str;
 
 mod foo {
-
     #[derive(Debug)]
     pub struct Foo {
         pub s: &'static str
@@ -13,6 +12,10 @@ mod foo {
             Foo { s: s }
         }
     }
+}
+
+fn somefn() -> Option<u32> {
+    Some(42)
 }
 
 fn main() {
@@ -31,4 +34,24 @@ fn main() {
 
     let chars2: Vec<char> = bytes.iter().map(|x| *x as char).collect::<Vec<_>>();
     println!("{:?}", chars2);
+
+    // variable binding
+    let number = 5;
+    match number {
+        1 => println!("one"),
+        n@(2 | 3 | 5 | 8) => println!("{}", n),
+        n@13..=19 => println!("tenn {}", n),
+        _ => println!("no")
+    }
+
+    let refvar = "asdgia;lkjsdf";
+    match refvar {
+        val => println!("{:?}", refvar)
+    }
+
+    match somefn() {
+
+    }
+
+    println!()
 }

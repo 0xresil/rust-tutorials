@@ -103,4 +103,9 @@ fn main() {
     eat_and_dump(n);
     eat_and_dump(s);
     eat_and_dump(b);    
+
+    let dirx = Direction::Up;
+    if Direction::Up == dirx {
+        println!("direction is up");
+    }
 }
