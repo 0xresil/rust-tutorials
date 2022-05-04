@@ -10,8 +10,7 @@ cargo run --example iterator
 
 #### You can learn about RUST coding from here.
 
-# My_Learning-Rust
-Rust programming language
+# Rust programming language
 
 ## Installation
 ### Linux or MacOS
