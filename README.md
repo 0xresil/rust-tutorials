@@ -4,6 +4,7 @@
 ```sh
 cargo run --example enums
 cargo run --example iterator
+cargo run --example ex_sqlx
 ...
 
 ```

@@ -9,3 +9,7 @@ edition = "2018"
 borsh = "0.9.1"
 borsh-derive = "0.9.1"
 arr_macro = "0.1.3"
+
+# for sqlx and asynchronous
+sqlx = { version = "0.5", features = ["postgres", "runtime-tokio-native-tls"] }
+tokio = { version = "1.15", features = ["full"]}
