@@ -5,8 +5,13 @@
 cargo run --example enums
 cargo run --example iterator
 cargo run --example ex_sqlx
+cargo run --example actixweb
 ...
 
+```
+### Tests
+```
+cargo test --example actixweb
 ```
 
 #### You can learn about RUST coding from here.
